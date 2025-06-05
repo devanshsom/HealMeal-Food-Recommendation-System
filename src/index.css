@@ -1,0 +1,110 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 350 43% 98%;
+    --foreground: 350 10% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 350 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 350 10% 15%;
+
+    --primary: 350 70% 55%;
+    --primary-foreground: 350 100% 97%;
+
+    --secondary: 210 55% 55%;
+    --secondary-foreground: 210 100% 97%;
+
+    --muted: 350 10% 93%;
+    --muted-foreground: 350 10% 45%;
+
+    --accent: 350 20% 92%;
+    --accent-foreground: 350 10% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 350 20% 90%;
+    --input: 350 20% 90%;
+    --ring: 350 70% 55%;
+
+    --radius: 1rem;
+
+    --sidebar-background: 350 43% 98%;
+    --sidebar-foreground: 350 10% 15%;
+    --sidebar-primary: 350 70% 55%;
+    --sidebar-primary-foreground: 350 100% 97%;
+    --sidebar-accent: 350 20% 92%;
+    --sidebar-accent-foreground: 350 10% 15%;
+    --sidebar-border: 350 20% 90%;
+    --sidebar-ring: 350 70% 55%;
+  }
+
+  .dark {
+    --background: 350 20% 12%;
+    --foreground: 350 10% 95%;
+
+    --card: 350 20% 15%;
+    --card-foreground: 350 10% 95%;
+
+    --popover: 350 20% 15%;
+    --popover-foreground: 350 10% 95%;
+
+    --primary: 350 70% 55%;
+    --primary-foreground: 350 10% 95%;
+
+    --secondary: 210 55% 55%;
+    --secondary-foreground: 210 10% 95%;
+
+    --muted: 350 20% 25%;
+    --muted-foreground: 350 10% 70%;
+
+    --accent: 350 20% 25%;
+    --accent-foreground: 350 10% 95%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 350 20% 25%;
+    --input: 350 20% 25%;
+    --ring: 350 70% 55%;
+
+    --sidebar-background: 350 20% 12%;
+    --sidebar-foreground: 350 10% 95%;
+    --sidebar-primary: 350 70% 55%;
+    --sidebar-primary-foreground: 350 10% 95%;
+    --sidebar-accent: 350 20% 25%;
+    --sidebar-accent-foreground: 350 10% 95%;
+    --sidebar-border: 350 20% 25%;
+    --sidebar-ring: 350 70% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .heal-card {
+    @apply bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-6 border border-heal-100;
+  }
+  
+  .headline {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-heal-800;
+  }
+  
+  .subheadline {
+    @apply text-xl md:text-2xl text-heal-600 font-medium;
+  }
+}
